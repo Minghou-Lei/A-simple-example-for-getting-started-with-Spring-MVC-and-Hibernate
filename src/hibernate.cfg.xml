@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- 配置关于数据库连接的四个项：driverClass  url username password -->
+        <property name="hibernate.connection.driver_class">net.ucanaccess.jdbc.UcanaccessDriver</property>
+
+        <!--由于服务器运行时hibernate所在的相对目录不相同，所以这里使用了绝对路径-->
+
+        <!-- ↓↓↓↓↓ Please change your database path here ↓↓↓↓↓ -->
+        <property name="hibernate.connection.url">jdbc:ucanaccess://F:/TomcatTestServer/database/BookStore.accdb</property>
+        <!-- ↑↑↑↑↑ Please change your database path here ↑↑↑↑↑ -->
+        <property name="hibernate.connection.username"></property>
+        <property name="hibernate.connection.password"></property>
+
+        <!-- 可以将向数据库发送的SQL语句显示出来 -->
+        <property name="hibernate.show_sql">false</property>
+        <!-- 格式化SQL语句 -->
+        <property name="hibernate.format_sql">false</property>
+
+        <!-- hibernate的方言 -->
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+
+        <!-- 配置Hibernate映射实体类读取其中注解 -->
+        <mapping class="BookStore.domain.OrderInfo"/>
+        <mapping class="BookStore.domain.Order"/>
+        <mapping class="BookStore.domain.UserInfo"/>
+        <mapping class="BookStore.domain.Book"/>
+        <mapping class="BookStore.domain.ClassInfo"/>
+        <mapping class="BookStore.domain.OrderInfoKey"/>
+        <!--
+            配置hibernate的映射文件所在的位置
+            <mapping resource="BookStore.domain/Book.hbm.xml"/>
+            <mapping resource="BookStore.domain/ClassInfo.hbm.xml"/>
+            <mapping resource="BookStore.domain/Order.hbm.xml"/>
+            <mapping class="BookStore.domain.OrderInfo"/>
+            <mapping resource="BookStore.domain/OrderInfo.hbm.xml"/>
+            <mapping resource="BookStore.domain/UserInfo.hbm.xml"/>
+        -->
+
+    </session-factory>
+</hibernate-configuration>

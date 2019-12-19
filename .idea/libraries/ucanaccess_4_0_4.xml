@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="ucanaccess-4.0.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/driver/ucanaccess-4.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/driver/jackcess-3.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/driver/hsqldb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/driver/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/driver/commons-lang3-3.9.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
